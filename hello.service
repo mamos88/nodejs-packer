@@ -1,0 +1,13 @@
+[Unit]
+Description=Hello Node.js Application
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/node /home/ec2-user/helloapp/hellonode.js
+Restart=always
+User=ec2-user
+Group=ec2-user
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target
